@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navi_map"
+        android:icon="@drawable/map_icon"
+        android:enabled="true"
+        android:title="지도"/>
+    <item
+        android:id="@+id/navi_two"
+        android:icon="@drawable/two"
+        android:enabled="true"
+        android:title="2"/>
+    <item
+        android:id="@+id/navi_three"
+        android:icon="@drawable/three"
+        android:enabled="true"
+        android:title="3"/>
+    <item
+        android:id="@+id/navi_four"
+        android:icon="@drawable/four"
+        android:enabled="true"
+        android:title="4"/>
+</menu>

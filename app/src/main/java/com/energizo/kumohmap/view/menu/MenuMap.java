@@ -112,10 +112,6 @@ public class MenuMap extends Fragment implements AutoPermissionsListener {
         return view;
     }
 
-//    @Override
-//    public void onMapReady(@NonNull GoogleMap googleMap) {
-//
-//    }
 
     public void startLocationService() {
         try {

@@ -61,7 +61,7 @@ public class MenuMap extends Fragment implements AutoPermissionsListener {
     private CircleOptions circle1KM;
 
     private FusedLocationProviderClient fusedLocationClient;
-    private LatLng now;
+
     @SuppressLint("MissingPermission")
     @Nullable
     @Override
@@ -200,11 +200,6 @@ public class MenuMap extends Fragment implements AutoPermissionsListener {
         if (getActivity().checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && getActivity().checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    Activity#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for Activity#requestPermissions for more details.
             Toast.makeText(getContext(),"접근 권한이 없습니다.",Toast.LENGTH_SHORT).show();
             return;
         } else {

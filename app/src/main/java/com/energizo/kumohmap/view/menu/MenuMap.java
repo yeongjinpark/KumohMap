@@ -30,7 +30,6 @@ import org.jetbrains.annotations.NotNull;
 public class MenuMap extends Fragment implements
                                         GoogleMap.OnMyLocationButtonClickListener,
                                         GoogleMap.OnMyLocationClickListener
-                                        //,OnMapReadyCallback
 {
 
     private View view;
@@ -61,16 +60,7 @@ public class MenuMap extends Fragment implements
             public void onMapReady(@NonNull GoogleMap googleMap) {
                 Log.i("MyLocTest","지도 준비됨");
                 map = googleMap;
-                fusedLocationClient.getLastLocation()
-                        .addOnSuccessListener( getActivity(), new OnSuccessListener<Location>() {
-                            @Override
-                            public void onSuccess(Location location) {
-                                // Got last known location. In some rare situations this can be null.
-                                if (location != null) {
-                                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()) , 18));
-                                }
-                            }
-                        });
+                getNowLocation();
 
                 map.setMyLocationEnabled(true);
                 onMyLocationButtonClick();
@@ -92,7 +82,6 @@ public class MenuMap extends Fragment implements
                         }
                     }
                 });
-
     }
     @Override
     public boolean onMyLocationButtonClick() {
